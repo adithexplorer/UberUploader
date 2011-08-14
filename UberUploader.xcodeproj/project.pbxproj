@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4025D48D13F59364009C7788 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4025D48C13F59364009C7788 /* AssetsLibrary.framework */; };
+		409EC81B13F691820049D0B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409EC81A13F691820049D0B4 /* CoreImage.framework */; };
+		409EC81F13F6ED3C0049D0B4 /* ImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */; };
+		40AC66C113EF02B400A1DDC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C013EF02B400A1DDC8 /* UIKit.framework */; };
+		40AC66C313EF02B400A1DDC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C213EF02B400A1DDC8 /* Foundation.framework */; };
+		40AC66C513EF02B400A1DDC8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C413EF02B400A1DDC8 /* CoreData.framework */; };
+		40AC66CB13EF02B400A1DDC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40AC66C913EF02B400A1DDC8 /* InfoPlist.strings */; };
+		40AC66CD13EF02B400A1DDC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66CC13EF02B400A1DDC8 /* main.m */; };
+		40AC66D113EF02B400A1DDC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66D013EF02B400A1DDC8 /* AppDelegate.m */; };
+		40AC66D413EF02B400A1DDC8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AC66D213EF02B400A1DDC8 /* MainStoryboard_iPhone.storyboard */; };
+		40AC66DA13EF02B400A1DDC8 /* UberUploader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */; };
+		40AC66DD13EF02B400A1DDC8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66DC13EF02B400A1DDC8 /* MasterViewController.m */; };
+		40AC66E013EF02B400A1DDC8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66DF13EF02B400A1DDC8 /* DetailViewController.m */; };
+		40AC66E813EF02B400A1DDC8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66E713EF02B400A1DDC8 /* SenTestingKit.framework */; };
+		40AC66E913EF02B500A1DDC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C013EF02B400A1DDC8 /* UIKit.framework */; };
+		40AC66EA13EF02B500A1DDC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C213EF02B400A1DDC8 /* Foundation.framework */; };
+		40AC66EB13EF02B500A1DDC8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C413EF02B400A1DDC8 /* CoreData.framework */; };
+		40AC66F313EF02B500A1DDC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40AC66F113EF02B500A1DDC8 /* InfoPlist.strings */; };
+		40AC66F613EF02B500A1DDC8 /* UberUploaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC66F513EF02B500A1DDC8 /* UberUploaderTests.m */; };
+		40B3C69F13F6EFA100D2037C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B3C69D13F6EFA100D2037C /* MainStoryboard_iPad.storyboard */; };
+		40C94B9C13EF20F6007DA792 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C94B9B13EF20F6007DA792 /* CoreGraphics.framework */; };
+		40C94BA113EF29C8007DA792 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C94BA013EF29C8007DA792 /* QuartzCore.framework */; };
+		40E3FBB013EF1D64005B8845 /* WoodFloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 40E3FBAF13EF1D64005B8845 /* WoodFloor.png */; };
+		40FC683813F09DB800D30E61 /* WoodFloorwithNoebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 40FC683713F09DB800D30E61 /* WoodFloorwithNoebook.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40AC66EC13EF02B500A1DDC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40AC66B313EF02B300A1DDC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40AC66BB13EF02B400A1DDC8;
+			remoteInfo = UberUploader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4025D48C13F59364009C7788 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		409EC81A13F691820049D0B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		409EC81D13F6ED3C0049D0B4 /* ImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditor.h; sourceTree = "<group>"; };
+		409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditor.m; sourceTree = "<group>"; };
+		40AC66BC13EF02B400A1DDC8 /* UberUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AC66C013EF02B400A1DDC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		40AC66C213EF02B400A1DDC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		40AC66C413EF02B400A1DDC8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		40AC66C813EF02B400A1DDC8 /* UberUploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UberUploader-Info.plist"; sourceTree = "<group>"; };
+		40AC66CA13EF02B400A1DDC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		40AC66CC13EF02B400A1DDC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40AC66CE13EF02B400A1DDC8 /* UberUploader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UberUploader-Prefix.pch"; sourceTree = "<group>"; };
+		40AC66CF13EF02B400A1DDC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40AC66D013EF02B400A1DDC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40AC66D313EF02B400A1DDC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		40AC66D913EF02B400A1DDC8 /* UberUploader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UberUploader.xcdatamodel; sourceTree = "<group>"; };
+		40AC66DB13EF02B400A1DDC8 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		40AC66DC13EF02B400A1DDC8 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		40AC66DE13EF02B400A1DDC8 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		40AC66DF13EF02B400A1DDC8 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		40AC66E613EF02B400A1DDC8 /* UberUploaderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberUploaderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AC66E713EF02B400A1DDC8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		40AC66F013EF02B500A1DDC8 /* UberUploaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UberUploaderTests-Info.plist"; sourceTree = "<group>"; };
+		40AC66F213EF02B500A1DDC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		40AC66F413EF02B500A1DDC8 /* UberUploaderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UberUploaderTests.h; sourceTree = "<group>"; };
+		40AC66F513EF02B500A1DDC8 /* UberUploaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UberUploaderTests.m; sourceTree = "<group>"; };
+		40B3C69E13F6EFA100D2037C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		40C94B9B13EF20F6007DA792 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		40C94B9E13EF2971007DA792 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		40C94BA013EF29C8007DA792 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		40E3FBAF13EF1D64005B8845 /* WoodFloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WoodFloor.png; sourceTree = "<group>"; };
+		40FC683713F09DB800D30E61 /* WoodFloorwithNoebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WoodFloorwithNoebook.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40AC66B913EF02B400A1DDC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409EC81B13F691820049D0B4 /* CoreImage.framework in Frameworks */,
+				4025D48D13F59364009C7788 /* AssetsLibrary.framework in Frameworks */,
+				40C94BA113EF29C8007DA792 /* QuartzCore.framework in Frameworks */,
+				40C94B9C13EF20F6007DA792 /* CoreGraphics.framework in Frameworks */,
+				40AC66C113EF02B400A1DDC8 /* UIKit.framework in Frameworks */,
+				40AC66C313EF02B400A1DDC8 /* Foundation.framework in Frameworks */,
+				40AC66C513EF02B400A1DDC8 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40AC66E213EF02B400A1DDC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AC66E813EF02B400A1DDC8 /* SenTestingKit.framework in Frameworks */,
+				40AC66E913EF02B500A1DDC8 /* UIKit.framework in Frameworks */,
+				40AC66EA13EF02B500A1DDC8 /* Foundation.framework in Frameworks */,
+				40AC66EB13EF02B500A1DDC8 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40AC66B113EF02B300A1DDC8 = {
+			isa = PBXGroup;
+			children = (
+				40AC66C613EF02B400A1DDC8 /* UberUploader */,
+				40AC66EE13EF02B500A1DDC8 /* UberUploaderTests */,
+				40AC66BF13EF02B400A1DDC8 /* Frameworks */,
+				40AC66BD13EF02B400A1DDC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40AC66BD13EF02B400A1DDC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40AC66BC13EF02B400A1DDC8 /* UberUploader.app */,
+				40AC66E613EF02B400A1DDC8 /* UberUploaderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40AC66BF13EF02B400A1DDC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				409EC81A13F691820049D0B4 /* CoreImage.framework */,
+				4025D48C13F59364009C7788 /* AssetsLibrary.framework */,
+				40C94BA013EF29C8007DA792 /* QuartzCore.framework */,
+				40C94B9E13EF2971007DA792 /* CoreMedia.framework */,
+				40C94B9B13EF20F6007DA792 /* CoreGraphics.framework */,
+				40AC66C013EF02B400A1DDC8 /* UIKit.framework */,
+				40AC66C213EF02B400A1DDC8 /* Foundation.framework */,
+				40AC66C413EF02B400A1DDC8 /* CoreData.framework */,
+				40AC66E713EF02B400A1DDC8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40AC66C613EF02B400A1DDC8 /* UberUploader */ = {
+			isa = PBXGroup;
+			children = (
+				40AC66CF13EF02B400A1DDC8 /* AppDelegate.h */,
+				40AC66D013EF02B400A1DDC8 /* AppDelegate.m */,
+				40AC66D213EF02B400A1DDC8 /* MainStoryboard_iPhone.storyboard */,
+				40B3C69D13F6EFA100D2037C /* MainStoryboard_iPad.storyboard */,
+				40AC66DB13EF02B400A1DDC8 /* MasterViewController.h */,
+				40AC66DC13EF02B400A1DDC8 /* MasterViewController.m */,
+				40AC66DE13EF02B400A1DDC8 /* DetailViewController.h */,
+				40AC66DF13EF02B400A1DDC8 /* DetailViewController.m */,
+				409EC81D13F6ED3C0049D0B4 /* ImageEditor.h */,
+				409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */,
+				40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */,
+				40AC66C713EF02B400A1DDC8 /* Supporting Files */,
+			);
+			path = UberUploader;
+			sourceTree = "<group>";
+		};
+		40AC66C713EF02B400A1DDC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40AC66C813EF02B400A1DDC8 /* UberUploader-Info.plist */,
+				40AC66C913EF02B400A1DDC8 /* InfoPlist.strings */,
+				40AC66CC13EF02B400A1DDC8 /* main.m */,
+				40AC66CE13EF02B400A1DDC8 /* UberUploader-Prefix.pch */,
+				40E3FBAF13EF1D64005B8845 /* WoodFloor.png */,
+				40FC683713F09DB800D30E61 /* WoodFloorwithNoebook.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40AC66EE13EF02B500A1DDC8 /* UberUploaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				40AC66F413EF02B500A1DDC8 /* UberUploaderTests.h */,
+				40AC66F513EF02B500A1DDC8 /* UberUploaderTests.m */,
+				40AC66EF13EF02B500A1DDC8 /* Supporting Files */,
+			);
+			path = UberUploaderTests;
+			sourceTree = "<group>";
+		};
+		40AC66EF13EF02B500A1DDC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40AC66F013EF02B500A1DDC8 /* UberUploaderTests-Info.plist */,
+				40AC66F113EF02B500A1DDC8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40AC66BB13EF02B400A1DDC8 /* UberUploader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40AC66F913EF02B500A1DDC8 /* Build configuration list for PBXNativeTarget "UberUploader" */;
+			buildPhases = (
+				40AC66B813EF02B400A1DDC8 /* Sources */,
+				40AC66B913EF02B400A1DDC8 /* Frameworks */,
+				40AC66BA13EF02B400A1DDC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UberUploader;
+			productName = UberUploader;
+			productReference = 40AC66BC13EF02B400A1DDC8 /* UberUploader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40AC66E513EF02B400A1DDC8 /* UberUploaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40AC66FC13EF02B500A1DDC8 /* Build configuration list for PBXNativeTarget "UberUploaderTests" */;
+			buildPhases = (
+				40AC66E113EF02B400A1DDC8 /* Sources */,
+				40AC66E213EF02B400A1DDC8 /* Frameworks */,
+				40AC66E313EF02B400A1DDC8 /* Resources */,
+				40AC66E413EF02B400A1DDC8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40AC66ED13EF02B500A1DDC8 /* PBXTargetDependency */,
+			);
+			name = UberUploaderTests;
+			productName = UberUploaderTests;
+			productReference = 40AC66E613EF02B400A1DDC8 /* UberUploaderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40AC66B313EF02B300A1DDC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 40AC66B613EF02B300A1DDC8 /* Build configuration list for PBXProject "UberUploader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40AC66B113EF02B300A1DDC8;
+			productRefGroup = 40AC66BD13EF02B400A1DDC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40AC66BB13EF02B400A1DDC8 /* UberUploader */,
+				40AC66E513EF02B400A1DDC8 /* UberUploaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40AC66BA13EF02B400A1DDC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AC66CB13EF02B400A1DDC8 /* InfoPlist.strings in Resources */,
+				40AC66D413EF02B400A1DDC8 /* MainStoryboard_iPhone.storyboard in Resources */,
+				40E3FBB013EF1D64005B8845 /* WoodFloor.png in Resources */,
+				40FC683813F09DB800D30E61 /* WoodFloorwithNoebook.png in Resources */,
+				40B3C69F13F6EFA100D2037C /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40AC66E313EF02B400A1DDC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AC66F313EF02B500A1DDC8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40AC66E413EF02B400A1DDC8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40AC66B813EF02B400A1DDC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AC66CD13EF02B400A1DDC8 /* main.m in Sources */,
+				40AC66D113EF02B400A1DDC8 /* AppDelegate.m in Sources */,
+				40AC66DA13EF02B400A1DDC8 /* UberUploader.xcdatamodeld in Sources */,
+				40AC66DD13EF02B400A1DDC8 /* MasterViewController.m in Sources */,
+				40AC66E013EF02B400A1DDC8 /* DetailViewController.m in Sources */,
+				409EC81F13F6ED3C0049D0B4 /* ImageEditor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40AC66E113EF02B400A1DDC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AC66F613EF02B500A1DDC8 /* UberUploaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40AC66ED13EF02B500A1DDC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40AC66BB13EF02B400A1DDC8 /* UberUploader */;
+			targetProxy = 40AC66EC13EF02B500A1DDC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40AC66C913EF02B400A1DDC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40AC66CA13EF02B400A1DDC8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		40AC66D213EF02B400A1DDC8 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40AC66D313EF02B400A1DDC8 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		40AC66F113EF02B500A1DDC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40AC66F213EF02B500A1DDC8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		40B3C69D13F6EFA100D2037C /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40B3C69E13F6EFA100D2037C /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40AC66F713EF02B500A1DDC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40AC66F813EF02B500A1DDC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40AC66FA13EF02B500A1DDC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
+				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		40AC66FB13EF02B500A1DDC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
+				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		40AC66FD13EF02B500A1DDC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UberUploader.app/UberUploader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
+				INFOPLIST_FILE = "UberUploaderTests/UberUploaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		40AC66FE13EF02B500A1DDC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UberUploader.app/UberUploader";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
+				INFOPLIST_FILE = "UberUploaderTests/UberUploaderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40AC66B613EF02B300A1DDC8 /* Build configuration list for PBXProject "UberUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40AC66F713EF02B500A1DDC8 /* Debug */,
+				40AC66F813EF02B500A1DDC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40AC66F913EF02B500A1DDC8 /* Build configuration list for PBXNativeTarget "UberUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40AC66FA13EF02B500A1DDC8 /* Debug */,
+				40AC66FB13EF02B500A1DDC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40AC66FC13EF02B500A1DDC8 /* Build configuration list for PBXNativeTarget "UberUploaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40AC66FD13EF02B500A1DDC8 /* Debug */,
+				40AC66FE13EF02B500A1DDC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40AC66D913EF02B400A1DDC8 /* UberUploader.xcdatamodel */,
+			);
+			currentVersion = 40AC66D913EF02B400A1DDC8 /* UberUploader.xcdatamodel */;
+			path = UberUploader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 40AC66B313EF02B300A1DDC8 /* Project object */;
+}
