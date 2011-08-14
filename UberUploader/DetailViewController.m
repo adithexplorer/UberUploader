@@ -130,7 +130,7 @@
 //have converted to CIIMage Check what happns
 - (UIImage *)convertImageToGrayScale:(UIImage *)image {
     
- 
+ //I Think this Works
     CIImage *input = [CIImage imageWithCGImage:image.CGImage];
     CIFilter *filter = [CIFilter filterWithName:@"CIColorMonochrome"];
    
