@@ -9,8 +9,12 @@
 #import "Settings.h"
 
 @implementation Settings
+//Facebook
 @synthesize facebook;
 @synthesize facebookInstance;
+
+//Flickr
+@synthesize flickr;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,9 +59,17 @@
 
 -(IBAction)FacebookLogin:(id)sender
 {
+    //Creates facebook Logon Dialog
     //[facebookInstance logout:self];
 
     [facebookInstance dialog:@"feed" andDelegate:self];
+}
+
+-(IBAction)FlickrLogin:(id)sender
+{
+    //Creates flickr Logon dialog
+  //  OFFlickrAPIContext *context = [[OFFlickrAPIContext alloc] initWithAPIKey:@"3093c012bd21c951d512331424fcbe63" sharedSecret:@"d812edbe4c328aa4"];
+    
 }
 
 - (void)dialogDidComplete:(FBDialog *)dialog

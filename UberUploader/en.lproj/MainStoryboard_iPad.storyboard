@@ -125,6 +125,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="FlickrLogin:" destination="9sL-Gp-AL9" eventType="touchUpInside" id="vLA-KG-M6m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHI-ki-8MS">
                                 <rect key="frame" x="300" y="258" width="103" height="37"/>
@@ -145,6 +148,7 @@
                     <navigationItem key="navigationItem" id="3gH-ry-ANV"/>
                     <connections>
                         <outlet property="facebook" destination="gFV-0Q-Nix" id="k4j-Wl-mIO"/>
+                        <outlet property="flickr" destination="dui-dp-alv" id="rej-bi-C3O"/>
                     </connections>
                 </viewController>
             </objects>
@@ -401,7 +405,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
             <relationships>
                 <relationship kind="action" name="FacebookLogin:"/>
+                <relationship kind="action" name="FlickrLogin:"/>
                 <relationship kind="outlet" name="facebook" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flickr" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

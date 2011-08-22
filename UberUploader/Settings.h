@@ -13,12 +13,16 @@
 @interface Settings : UIViewController <FBDialogDelegate, FBSessionDelegate>
 {
     UIButton *facebook;
+    UIButton *flickr;
     Facebook *facebookInstance;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *facebook;
+@property (strong, nonatomic) IBOutlet UIButton *flickr;
+
 @property (strong, nonatomic) Facebook *facebookInstance;
 
 -(IBAction)FacebookLogin:(id)sender;
+-(IBAction)FlickrLogin:(id)sender;
 
 @end

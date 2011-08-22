@@ -45,12 +45,12 @@
 /**
  * The delegate.
  */
-@property(nonatomic,strong) id<FBDialogDelegate> delegate;
+@property(nonatomic,assign) id<FBDialogDelegate> delegate;
 
 /**
  * The parameters.
  */
-@property(nonatomic, strong) NSMutableDictionary* params;
+@property(nonatomic, retain) NSMutableDictionary* params;
 
 /**
  * The title that is shown in the header atop the view.

@@ -223,15 +223,15 @@ BOOL FBIsDeviceIPad() {
     NSMutableArray* pairs = [NSMutableArray array];
     for (NSString* key in params.keyEnumerator) {
       NSString* value = [params objectForKey:key];
-      NSString* escaped_value = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+      NSString* escaped_value = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                   NULL, /* allocator */
-                                  (__bridge CFStringRef)value,
+                                  (CFStringRef)value,
                                   NULL, /* charactersToLeaveUnescaped */
                                   (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                   kCFStringEncodingUTF8);
 
       [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, escaped_value]];
-      //[escaped_value release];
+      [escaped_value release];
     }
 
     NSString* query = [pairs componentsJoinedByString:@"&"];
@@ -270,7 +270,7 @@ BOOL FBIsDeviceIPad() {
 - (void)dismiss:(BOOL)animated {
   [self dialogWillDisappear];
 
- // [_loadingURL release];
+  [_loadingURL release];
   _loadingURL = nil;
 
   if (animated) {
@@ -311,8 +311,7 @@ BOOL FBIsDeviceIPad() {
     [self addSubview:_iconView];
 
     UIColor* color = [UIColor colorWithRed:167.0/255 green:184.0/255 blue:216.0/255 alpha:1];
-    _closeButton = [UIButton buttonWithType:UIButtonTypeCustom] 
-                    ;
+    _closeButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
     [_closeButton setImage:closeImage forState:UIControlStateNormal];
     [_closeButton setTitleColor:color forState:UIControlStateNormal];
     [_closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
@@ -357,7 +356,6 @@ BOOL FBIsDeviceIPad() {
   return self;
 }
 
-/*
 - (void)dealloc {
   _webView.delegate = nil;
   [_webView release];
@@ -371,7 +369,6 @@ BOOL FBIsDeviceIPad() {
   [_modalBackgroundView release];
   [super dealloc];
 }
- */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // UIView
@@ -524,8 +521,8 @@ BOOL FBIsDeviceIPad() {
          delegate: (id <FBDialogDelegate>) delegate {
 
   self = [self init];
-  _serverURL = serverURL ;
-  _params = params ;
+  _serverURL = [serverURL retain];
+  _params = [params retain];
   _delegate = delegate;
 
   return self;
@@ -545,8 +542,8 @@ BOOL FBIsDeviceIPad() {
 
 - (void)loadURL:(NSString*)url get:(NSDictionary*)getParams {
 
- // [_loadingURL release];
-  _loadingURL = [self generateURL:url params:getParams];
+  [_loadingURL release];
+  _loadingURL = [[self generateURL:url params:getParams] retain];
   NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:_loadingURL];
 
   [_webView loadRequest:request];
