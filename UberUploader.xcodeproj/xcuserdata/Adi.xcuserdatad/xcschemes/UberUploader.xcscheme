@@ -38,6 +38,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "40AC66BB13EF02B400A1DDC8"
+            BuildableName = "UberUploader.app"
+            BlueprintName = "UberUploader"
+            ReferencedContainer = "container:UberUploader.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
