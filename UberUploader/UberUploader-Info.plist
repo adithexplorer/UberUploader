@@ -9,6 +9,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>fb158734337540761</string>
 				<string>UberUploader</string>
 			</array>
 			<key>CFBundleURLName</key>

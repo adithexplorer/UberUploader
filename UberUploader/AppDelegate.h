@@ -8,14 +8,23 @@
 //  Repository on GitHub
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate>
+{
+    Facebook *facebookInstance;
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+//Facebook Session
+@property (strong, nonatomic) Facebook *facebookInstance;
+
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

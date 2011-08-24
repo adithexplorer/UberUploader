@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 #import "ObjectiveFlickr.h"
+#import "AppDelegate.h"
 
 
 @interface Settings : UIViewController <FBDialogDelegate, FBSessionDelegate>
@@ -16,14 +17,16 @@
     UIButton *facebook;
     UIButton *flickr;
     UIButton *instagram;
+    
+    AppDelegate *appdelegate;
 
-    Facebook *facebookInstance;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *facebook;
 @property (strong, nonatomic) IBOutlet UIButton *flickr;
 @property (strong, nonatomic) IBOutlet UIButton *instagram;
-@property (strong, nonatomic) Facebook *facebookInstance;
+@property (strong, nonatomic) AppDelegate *appdelegate;
+
 
 -(IBAction)FacebookLogin:(id)sender;
 -(IBAction)FlickrLogin:(id)sender;

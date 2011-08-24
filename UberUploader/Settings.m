@@ -10,8 +10,8 @@
 
 @implementation Settings
 //Facebook
+@synthesize appdelegate;
 @synthesize facebook;
-@synthesize facebookInstance;
 @synthesize instagram;
 //Flickr
 @synthesize flickr;
@@ -49,10 +49,9 @@
     [super viewDidLoad];
     
     //Starts FaceBook and checks if application is already logged in or not. If not then it enables the login button.  NOT WORKING AT THE MOMENT --INVESTIGATE
-    facebookInstance = [[Facebook alloc] initWithAppId:@"158734337540761" andDelegate:self];
-    if (![facebookInstance isSessionValid]) {
-        facebook.enabled = YES;
-        NSLog(@"Session is Valid");
+    appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (![appdelegate.facebookInstance isSessionValid]) {
+        NSLog(@"FACEBOOK SESTTINGS INSTANCE SSESSION NOT VALID");
     }
     
 }
@@ -62,7 +61,8 @@
     //Creates facebook Logon Dialog
     //[facebookInstance logout:self];
 
-    [facebookInstance dialog:@"feed" andDelegate:self];
+  //  [facebookInstance dialog:@"feed" andDelegate:self];
+    [appdelegate.facebookInstance authorize:nil];
 }
 
 -(IBAction)FlickrLogin:(id)sender

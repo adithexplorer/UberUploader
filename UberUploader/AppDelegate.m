@@ -9,11 +9,51 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-
+@synthesize facebookInstance;
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+
+
+
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //Creates a facebook instace
+    facebookInstance = [[Facebook alloc] initWithAppId:@"158734337540761" andDelegate:self];
+    
+    //Checks if a facebook access token is already present
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        facebookInstance.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebookInstance.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+  /*  
+    if (![facebookInstance isSessionValid]) {
+        [facebookInstance authorize:nil];
+    }
+    */
+    return YES;
+}
+
+//Call to facebook to authorize user using Single Sign on approach
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    NSLog(@"Handle Open URL got called");
+    return [facebookInstance handleOpenURL:url]; 
+    
+}
+
+//FB Delegate Method
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebookInstance accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebookInstance expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    NSLog(@"fbDidLogin Got Called");
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
