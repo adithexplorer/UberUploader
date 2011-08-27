@@ -39,13 +39,13 @@
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+/*- (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self signInToCustomService];    
     
-}
+}*/
 
 
 - (void)viewDidUnload
@@ -77,8 +77,11 @@
     return auth;
 }
 
-- (void)signInToCustomService {
+-(void)viewDidLoad{
+//- (void)signInToCustomService {
+    [super viewDidLoad];
     
+    NSLog(@"Sign Into FLicker Method Called");
     NSURL *requestURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/request_token"];
     NSURL *accessURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/access_token"];
     NSURL *authorizeURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/authorize"];
@@ -101,11 +104,22 @@
                                                        authorizeTokenURL:authorizeURL
                                                           accessTokenURL:accessURL
                                                           authentication:auth
-                                                          appServiceName:@"My App: Flickr"
+                                                          appServiceName:@"Flickr"
                                                                 delegate:self
                                                         finishedSelector:@selector(viewController:finishedWithAuth:error:)] ;
     
-    [[self navigationController] pushViewController:viewController animated:YES];
+    [[self navigationController] pushViewController:viewController
+                                           animated:YES];
+}
+
+- (void)viewController:(GTMOAuthViewControllerTouch *)viewController
+      finishedWithAuth:(GTMOAuthAuthentication *)auth
+                 error:(NSError *)error {
+    if (error != nil) {
+        NSLog(@"Flicker Auth Failed");
+    } else {
+        NSLog(@"Flicker Auth Succeeded");
+    }
 }
 
 @end

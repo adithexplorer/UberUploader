@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
-//#import "ObjectiveFlickr.h"
 #import "AppDelegate.h"
+#import "GTMOAuthViewControllerTouch.h"
 
 
 @interface Settings : UIViewController <FBDialogDelegate, FBSessionDelegate>
@@ -31,6 +31,9 @@
 -(IBAction)FacebookLogin:(id)sender;
 -(IBAction)FlickrLogin:(id)sender;
 -(IBAction)InstagramLogin:(id)sender;
+
+- (GTMOAuthAuthentication *)myCustomAuth;
+
 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Settings.h"
+#import "FlickrAuthenticate.h"
 
 @implementation Settings
 //Facebook
@@ -67,9 +68,68 @@
 
 -(IBAction)FlickrLogin:(id)sender
 {
-    //Creates flickr Logon dialog DOES NOT WORK
-    //OFFlickrAPIContext *context = [[OFFlickrAPIContext alloc] initWithAPIKey:@"3093c012bd21c951d512331424fcbe63" sharedSecret:@"d812edbe4c328aa4"];
+    NSLog(@"Sign Into FLicker Method Called");
+    NSURL *requestURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/request_token"];
+    NSURL *accessURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/access_token"];
+    NSURL *authorizeURL = [NSURL URLWithString:@"http://www.flickr.com/services/oauth/authorize"];
+    NSString *scope = @"http://example.com/scope";
+    
+    GTMOAuthAuthentication *auth = [self myCustomAuth];
+    
+    // set the callback URL to which the site should redirect, and for which
+    // the OAuth controller should look to determine when sign-in has
+    // finished or been canceled
+    //
+    // This URL does not need to be for an actual web page
+    [auth setCallback:@"http://www.example.com/OAuthCallback"];
+    
+    // Display the autentication view
+    GTMOAuthViewControllerTouch *viewController;
+    viewController = [[GTMOAuthViewControllerTouch alloc] initWithScope:scope
+                                                               language:nil
+                                                        requestTokenURL:requestURL
+                                                      authorizeTokenURL:authorizeURL
+                                                         accessTokenURL:accessURL
+                                                         authentication:auth
+                                                         appServiceName:@"Flickr"
+                                                               delegate:self
+                                                       finishedSelector:@selector(viewController:finishedWithAuth:error:)] ;
+    
+    
+    //Maybe I can have this as a if statement, ie if its iphone then do this otherwise do that 
+   //Ipad Modal View
+    viewController.modalPresentationStyle = UIModalPresentationPageSheet;
+    
+    [self presentModalViewController:viewController animated:YES];
 }
+
+- (GTMOAuthAuthentication *)myCustomAuth {
+    NSString *myConsumerKey = @"3093c012bd21c951d512331424fcbe63";    // pre-registered with service
+    NSString *myConsumerSecret = @"d812edbe4c328aa4"; // pre-assigned by service
+    
+    GTMOAuthAuthentication *auth;
+    auth = [[GTMOAuthAuthentication alloc] initWithSignatureMethod:kGTMOAuthSignatureMethodHMAC_SHA1
+                                                       consumerKey:myConsumerKey
+                                                        privateKey:myConsumerSecret];
+    
+    // setting the service name lets us inspect the auth object later to know
+    // what service it is for
+    auth.serviceProvider = @"Flickr";
+    
+    return auth;
+}
+
+- (void)viewController:(GTMOAuthViewControllerTouch *)viewController
+      finishedWithAuth:(GTMOAuthAuthentication *)auth
+                 error:(NSError *)error {
+    if (error != nil) {
+        NSLog(@"Flicker Auth Failed");
+    } else {
+        NSLog(@"Flicker Auth Succeeded");
+        [self dismissModalViewControllerAnimated:YES];
+    }
+}
+
 
 -(IBAction)InstagramLogin:(id)sender
 {

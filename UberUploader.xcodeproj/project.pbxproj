@@ -37,7 +37,6 @@
 		407591491402FCE6005BBFE7 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591411402FCE6005BBFE7 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4075914A1402FCE6005BBFE7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591431402FCE6005BBFE7 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4075914B1402FCE6005BBFE7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591451402FCE6005BBFE7 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		408918261408E498002CDF93 /* FlickrAuthenticate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408918251408E498002CDF93 /* FlickrAuthenticate.m */; };
 		4089185B1408EDF6002CDF93 /* GTMOAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 408918581408EDF6002CDF93 /* GTMOAuthAuthentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4089185C1408EDF6002CDF93 /* GTMOAuthSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089185A1408EDF6002CDF93 /* GTMOAuthSignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4089185F1408EE21002CDF93 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089185E1408EE21002CDF93 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -137,8 +136,6 @@
 		407591431402FCE6005BBFE7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		407591441402FCE6005BBFE7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		407591451402FCE6005BBFE7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		408918241408E498002CDF93 /* FlickrAuthenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAuthenticate.h; sourceTree = "<group>"; };
-		408918251408E498002CDF93 /* FlickrAuthenticate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAuthenticate.m; sourceTree = "<group>"; };
 		408918571408EDF6002CDF93 /* GTMOAuthAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthAuthentication.h; sourceTree = "<group>"; };
 		408918581408EDF6002CDF93 /* GTMOAuthAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthAuthentication.m; sourceTree = "<group>"; };
 		408918591408EDF6002CDF93 /* GTMOAuthSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthSignIn.h; sourceTree = "<group>"; };
@@ -370,8 +367,6 @@
 				404B4D281402B0C900FCE9DB /* Settings.m */,
 				406272CB14043326009F63AA /* InstagramAuthenticate.h */,
 				406272CC14043326009F63AA /* InstagramAuthenticate.m */,
-				408918241408E498002CDF93 /* FlickrAuthenticate.h */,
-				408918251408E498002CDF93 /* FlickrAuthenticate.m */,
 				40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */,
 				40AC66C713EF02B400A1DDC8 /* Supporting Files */,
 			);
@@ -552,7 +547,6 @@
 				406272EC14044729009F63AA /* ASIHTTPRequest.m in Sources */,
 				406272ED14044729009F63AA /* ASIInputStream.m in Sources */,
 				406272EE14044729009F63AA /* ASINetworkQueue.m in Sources */,
-				408918261408E498002CDF93 /* FlickrAuthenticate.m in Sources */,
 				4089185B1408EDF6002CDF93 /* GTMOAuthAuthentication.m in Sources */,
 				4089185C1408EDF6002CDF93 /* GTMOAuthSignIn.m in Sources */,
 				4089185F1408EE21002CDF93 /* GTMHTTPFetcher.m in Sources */,
