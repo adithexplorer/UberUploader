@@ -37,6 +37,13 @@
 		407591491402FCE6005BBFE7 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591411402FCE6005BBFE7 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4075914A1402FCE6005BBFE7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591431402FCE6005BBFE7 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4075914B1402FCE6005BBFE7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 407591451402FCE6005BBFE7 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		408918261408E498002CDF93 /* FlickrAuthenticate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408918251408E498002CDF93 /* FlickrAuthenticate.m */; };
+		4089185B1408EDF6002CDF93 /* GTMOAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 408918581408EDF6002CDF93 /* GTMOAuthAuthentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4089185C1408EDF6002CDF93 /* GTMOAuthSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089185A1408EDF6002CDF93 /* GTMOAuthSignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4089185F1408EE21002CDF93 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089185E1408EE21002CDF93 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		408918631408EF20002CDF93 /* GTMOAuthViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 408918611408EF20002CDF93 /* GTMOAuthViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		408918661408F274002CDF93 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408918651408F274002CDF93 /* Security.framework */; };
+		408918681408F6A2002CDF93 /* GTMOAuthViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408918671408F6A2002CDF93 /* GTMOAuthViewTouch.xib */; };
 		409EC81B13F691820049D0B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409EC81A13F691820049D0B4 /* CoreImage.framework */; };
 		409EC81F13F6ED3C0049D0B4 /* ImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */; };
 		40AC66C113EF02B400A1DDC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AC66C013EF02B400A1DDC8 /* UIKit.framework */; };
@@ -63,20 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		409508471406F975000C0593 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 409508411406F975000C0593 /* ObjectiveFlickr.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6A8666490F9593B200325E1C;
-			remoteInfo = "ObjectiveFlickr (framework)";
-		};
-		409508491406F975000C0593 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 409508411406F975000C0593 /* ObjectiveFlickr.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6ABF72E60F939BE600B9179E;
-			remoteInfo = "ObjectiveFlickr (library)";
-		};
 		40AC66EC13EF02B500A1DDC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 40AC66B313EF02B300A1DDC8 /* Project object */;
@@ -144,7 +137,18 @@
 		407591431402FCE6005BBFE7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		407591441402FCE6005BBFE7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		407591451402FCE6005BBFE7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		409508411406F975000C0593 /* ObjectiveFlickr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveFlickr.xcodeproj; path = "../../../ObjectiveFlickr/adityamatharu-objectiveflickr-0d2ef87/ObjectiveFlickr.xcodeproj"; sourceTree = "<group>"; };
+		408918241408E498002CDF93 /* FlickrAuthenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAuthenticate.h; sourceTree = "<group>"; };
+		408918251408E498002CDF93 /* FlickrAuthenticate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAuthenticate.m; sourceTree = "<group>"; };
+		408918571408EDF6002CDF93 /* GTMOAuthAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthAuthentication.h; sourceTree = "<group>"; };
+		408918581408EDF6002CDF93 /* GTMOAuthAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthAuthentication.m; sourceTree = "<group>"; };
+		408918591408EDF6002CDF93 /* GTMOAuthSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthSignIn.h; sourceTree = "<group>"; };
+		4089185A1408EDF6002CDF93 /* GTMOAuthSignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthSignIn.m; sourceTree = "<group>"; };
+		4089185D1408EE21002CDF93 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		4089185E1408EE21002CDF93 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		408918601408EF20002CDF93 /* GTMOAuthViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuthViewControllerTouch.h; sourceTree = "<group>"; };
+		408918611408EF20002CDF93 /* GTMOAuthViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuthViewControllerTouch.m; sourceTree = "<group>"; };
+		408918651408F274002CDF93 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		408918671408F6A2002CDF93 /* GTMOAuthViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuthViewTouch.xib; path = "gtm-oauth-read-only/Source/Touch/GTMOAuthViewTouch.xib"; sourceTree = SOURCE_ROOT; };
 		409EC81A13F691820049D0B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		409EC81D13F6ED3C0049D0B4 /* ImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditor.h; sourceTree = "<group>"; };
 		409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditor.m; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408918661408F274002CDF93 /* Security.framework in Frameworks */,
 				406272F714044806009F63AA /* libz.1.1.3.dylib in Frameworks */,
 				406272F814044806009F63AA /* libz.1.2.5.dylib in Frameworks */,
 				406272F914044806009F63AA /* libz.1.dylib in Frameworks */,
@@ -232,12 +237,20 @@
 			name = "Facebook SDK";
 			sourceTree = "<group>";
 		};
-		404B4D6F1402D5EC00FCE9DB /* ObjectiveFlickr */ = {
+		404B4D6F1402D5EC00FCE9DB /* GoogleOAuth */ = {
 			isa = PBXGroup;
 			children = (
-				409508411406F975000C0593 /* ObjectiveFlickr.xcodeproj */,
+				408918671408F6A2002CDF93 /* GTMOAuthViewTouch.xib */,
+				408918601408EF20002CDF93 /* GTMOAuthViewControllerTouch.h */,
+				408918611408EF20002CDF93 /* GTMOAuthViewControllerTouch.m */,
+				408918571408EDF6002CDF93 /* GTMOAuthAuthentication.h */,
+				408918581408EDF6002CDF93 /* GTMOAuthAuthentication.m */,
+				408918591408EDF6002CDF93 /* GTMOAuthSignIn.h */,
+				4089185A1408EDF6002CDF93 /* GTMOAuthSignIn.m */,
+				4089185D1408EE21002CDF93 /* GTMHTTPFetcher.h */,
+				4089185E1408EE21002CDF93 /* GTMHTTPFetcher.m */,
 			);
-			name = ObjectiveFlickr;
+			name = GoogleOAuth;
 			sourceTree = "<group>";
 		};
 		406272CE14044643009F63AA /* ASIHTTPRequest */ = {
@@ -297,15 +310,6 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
-		409508421406F975000C0593 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				409508481406F975000C0593 /* ObjectiveFlickr.framework */,
-				4095084A1406F975000C0593 /* libObjectiveFlickr.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		40AC66B113EF02B300A1DDC8 = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +332,7 @@
 		40AC66BF13EF02B400A1DDC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				408918651408F274002CDF93 /* Security.framework */,
 				406272F314044806009F63AA /* libz.1.1.3.dylib */,
 				406272F414044806009F63AA /* libz.1.2.5.dylib */,
 				406272F514044806009F63AA /* libz.1.dylib */,
@@ -365,6 +370,8 @@
 				404B4D281402B0C900FCE9DB /* Settings.m */,
 				406272CB14043326009F63AA /* InstagramAuthenticate.h */,
 				406272CC14043326009F63AA /* InstagramAuthenticate.m */,
+				408918241408E498002CDF93 /* FlickrAuthenticate.h */,
+				408918251408E498002CDF93 /* FlickrAuthenticate.m */,
 				40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */,
 				40AC66C713EF02B400A1DDC8 /* Supporting Files */,
 			);
@@ -374,7 +381,7 @@
 		40AC66C713EF02B400A1DDC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				404B4D6F1402D5EC00FCE9DB /* ObjectiveFlickr */,
+				404B4D6F1402D5EC00FCE9DB /* GoogleOAuth */,
 				404B4D311402B4F300FCE9DB /* Facebook SDK */,
 				40AC66C813EF02B400A1DDC8 /* UberUploader-Info.plist */,
 				406272CE14044643009F63AA /* ASIHTTPRequest */,
@@ -464,12 +471,6 @@
 			mainGroup = 40AC66B113EF02B300A1DDC8;
 			productRefGroup = 40AC66BD13EF02B400A1DDC8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 409508421406F975000C0593 /* Products */;
-					ProjectRef = 409508411406F975000C0593 /* ObjectiveFlickr.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				40AC66BB13EF02B400A1DDC8 /* UberUploader */,
@@ -477,23 +478,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		409508481406F975000C0593 /* ObjectiveFlickr.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ObjectiveFlickr.framework;
-			remoteRef = 409508471406F975000C0593 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4095084A1406F975000C0593 /* libObjectiveFlickr.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libObjectiveFlickr.a;
-			remoteRef = 409508491406F975000C0593 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		40AC66BA13EF02B400A1DDC8 /* Resources */ = {
@@ -506,6 +490,7 @@
 				40FC683813F09DB800D30E61 /* WoodFloorwithNoebook.png in Resources */,
 				40B3C69F13F6EFA100D2037C /* MainStoryboard_iPad.storyboard in Resources */,
 				407591331402FC3D005BBFE7 /* FBDialog.bundle in Resources */,
+				408918681408F6A2002CDF93 /* GTMOAuthViewTouch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +552,11 @@
 				406272EC14044729009F63AA /* ASIHTTPRequest.m in Sources */,
 				406272ED14044729009F63AA /* ASIInputStream.m in Sources */,
 				406272EE14044729009F63AA /* ASINetworkQueue.m in Sources */,
+				408918261408E498002CDF93 /* FlickrAuthenticate.m in Sources */,
+				4089185B1408EDF6002CDF93 /* GTMOAuthAuthentication.m in Sources */,
+				4089185C1408EDF6002CDF93 /* GTMOAuthSignIn.m in Sources */,
+				4089185F1408EE21002CDF93 /* GTMHTTPFetcher.m in Sources */,
+				408918631408EF20002CDF93 /* GTMOAuthViewControllerTouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,11 +675,15 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/ssoauthkitClone/SSOAuthKit/**";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ObjectiveFlickr/adityamatharu-objectiveflickr-0d2ef87/Source\"/** \"$(SRCROOT)/../../ObjectiveFlickr/adityamatharu-objectiveflickr-0d2ef87/LFWebAPIKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR) \"$(SRCROOT)/ssoauthkitClone/SSOAuthKit\"/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -701,11 +695,15 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/ssoauthkitClone/SSOAuthKit/**";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../ObjectiveFlickr/adityamatharu-objectiveflickr-0d2ef87/Source\"/** \"$(SRCROOT)/../../ObjectiveFlickr/adityamatharu-objectiveflickr-0d2ef87/LFWebAPIKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR) \"$(SRCROOT)/ssoauthkitClone/SSOAuthKit\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

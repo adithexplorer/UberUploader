@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
-#import "ObjectiveFlickr.h"
+//#import "ObjectiveFlickr.h"
 #import "AppDelegate.h"
 
 

@@ -68,7 +68,7 @@
 -(IBAction)FlickrLogin:(id)sender
 {
     //Creates flickr Logon dialog DOES NOT WORK
-    OFFlickrAPIContext *context = [[OFFlickrAPIContext alloc] initWithAPIKey:@"3093c012bd21c951d512331424fcbe63" sharedSecret:@"d812edbe4c328aa4"];
+    //OFFlickrAPIContext *context = [[OFFlickrAPIContext alloc] initWithAPIKey:@"3093c012bd21c951d512331424fcbe63" sharedSecret:@"d812edbe4c328aa4"];
 }
 
 -(IBAction)InstagramLogin:(id)sender
