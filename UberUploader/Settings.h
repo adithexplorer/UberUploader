@@ -10,6 +10,7 @@
 #import "FBConnect.h"
 #import "AppDelegate.h"
 #import "GTMOAuthViewControllerTouch.h"
+#import "Constants.h"
 
 
 @interface Settings : UIViewController <FBDialogDelegate, FBSessionDelegate>
@@ -19,6 +20,11 @@
     UIButton *instagram;
     
     AppDelegate *appdelegate;
+    
+    
+    //Created this so that authentication can be set to this once token is recieved
+    GTMOAuthAuthentication *mAuth;
+
 
 }
 
@@ -33,6 +39,11 @@
 -(IBAction)InstagramLogin:(id)sender;
 
 - (GTMOAuthAuthentication *)myCustomAuth;
+- (void)doAnAuthenticatedAPIFetch;
+- (void)setAuthentication:(GTMOAuthAuthentication *)auth;
+- (void)updateUI;
+- (BOOL)isSignedIn;
+
 
 
 

@@ -149,6 +149,7 @@
 		409EC81A13F691820049D0B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		409EC81D13F6ED3C0049D0B4 /* ImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditor.h; sourceTree = "<group>"; };
 		409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageEditor.m; sourceTree = "<group>"; };
+		40A9CD43140AD43000759337 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		40AC66BC13EF02B400A1DDC8 /* UberUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AC66C013EF02B400A1DDC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40AC66C213EF02B400A1DDC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -365,6 +366,7 @@
 				409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */,
 				404B4D271402B0C900FCE9DB /* Settings.h */,
 				404B4D281402B0C900FCE9DB /* Settings.m */,
+				40A9CD43140AD43000759337 /* Constants.h */,
 				406272CB14043326009F63AA /* InstagramAuthenticate.h */,
 				406272CC14043326009F63AA /* InstagramAuthenticate.m */,
 				40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */,
