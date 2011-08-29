@@ -729,7 +729,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/UberUploader\"/**",
+					"\"$(SRCROOT)/UberUploader\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
@@ -753,7 +753,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/UberUploader\"/**",
+					"\"$(SRCROOT)/UberUploader\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
