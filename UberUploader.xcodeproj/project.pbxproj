@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401F8236140C188E00518CA4 /* YAJLIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401F8235140C188E00518CA4 /* YAJLIOS.framework */; };
 		4025D48D13F59364009C7788 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4025D48C13F59364009C7788 /* AssetsLibrary.framework */; };
 		404455FD140BE27A00F6A33B /* LROAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 404455F9140BE27A00F6A33B /* LROAuth2AccessToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		404455FE140BE27A00F6A33B /* LROAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 404455FB140BE27A00F6A33B /* LROAuth2Client.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		40445600140BE29000F6A33B /* YAJLIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404455FF140BE29000F6A33B /* YAJLIOS.framework */; };
 		40445607140BE2A100F6A33B /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445602140BE2A100F6A33B /* NSDictionary+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		40445608140BE2A100F6A33B /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445604140BE2A100F6A33B /* NSString+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		40445609140BE2A100F6A33B /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445606140BE2A100F6A33B /* NSURL+QueryInspector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -86,13 +86,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		401F8235140C188E00518CA4 /* YAJLIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLIOS.framework; sourceTree = "<group>"; };
 		4025D48C13F59364009C7788 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		404455F8140BE27A00F6A33B /* LROAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2AccessToken.h; sourceTree = "<group>"; };
 		404455F9140BE27A00F6A33B /* LROAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth2AccessToken.m; sourceTree = "<group>"; };
 		404455FA140BE27A00F6A33B /* LROAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2Client.h; sourceTree = "<group>"; };
 		404455FB140BE27A00F6A33B /* LROAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth2Client.m; sourceTree = "<group>"; };
 		404455FC140BE27A00F6A33B /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
-		404455FF140BE29000F6A33B /* YAJLIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJLIOS.framework; path = UberUploader/YAJLIOS.framework; sourceTree = "<group>"; };
 		40445601140BE2A100F6A33B /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
 		40445602140BE2A100F6A33B /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
 		40445603140BE2A100F6A33B /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				406272F814044806009F63AA /* libz.1.2.5.dylib in Frameworks */,
 				406272F914044806009F63AA /* libz.1.dylib in Frameworks */,
 				406272FA14044806009F63AA /* libz.dylib in Frameworks */,
-				40445600140BE29000F6A33B /* YAJLIOS.framework in Frameworks */,
+				401F8236140C188E00518CA4 /* YAJLIOS.framework in Frameworks */,
 				406272F214044767009F63AA /* MobileCoreServices.framework in Frameworks */,
 				406272F01404474F009F63AA /* SystemConfiguration.framework in Frameworks */,
 				404B4D6D1402D36D00FCE9DB /* CFNetwork.framework in Frameworks */,
@@ -242,6 +242,7 @@
 		404455F5140BE26500F6A33B /* OAuth2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				401F8235140C188E00518CA4 /* YAJLIOS.framework */,
 				404455F7140BE27A00F6A33B /* Classes */,
 			);
 			name = OAuth2.0;
@@ -378,7 +379,6 @@
 		40AC66BF13EF02B400A1DDC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				404455FF140BE29000F6A33B /* YAJLIOS.framework */,
 				408918651408F274002CDF93 /* Security.framework */,
 				406272F314044806009F63AA /* libz.1.1.3.dylib */,
 				406272F414044806009F63AA /* libz.1.2.5.dylib */,
@@ -728,7 +728,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
+					/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/,
 					"\"$(SRCROOT)/UberUploader\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -741,7 +741,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../LROAuth2Client/Vendor/YAJLIOS.framework\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/UberUploader/YAJLIOS.framework\"/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -752,7 +752,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
+					/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/,
 					"\"$(SRCROOT)/UberUploader\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -765,7 +765,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../LROAuth2Client/Vendor/YAJLIOS.framework\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/UberUploader/YAJLIOS.framework\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
