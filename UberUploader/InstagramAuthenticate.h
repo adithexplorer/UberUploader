@@ -1,21 +1,27 @@
 //
-//  InstagramAuthenticate.h
-//  UberUploader
+//  OAuthRequestController.h
+//  LROAuth2Demo
 //
-//  Created by Aditya Matharu on 23/08/2011.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Luke Redpath on 01/06/2010.
+//  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
-#import "SBJsonParser.h"
+#import "LROAuth2ClientDelegate.h"
+#import "Constants.h"
 
-@interface InstagramAuthenticate : UIViewController <UIWebViewDelegate, ASIHTTPRequestDelegate>
-{
-    UIWebView *webView;
+@class LROAuth2Client;
+@class LROAuth2AccessToken;
+
+extern NSString *const OAuthReceivedAccessTokenNotification;
+extern NSString *const OAuthRefreshedAccessTokenNotification;
+
+@interface InstagramAuthenticate : UIViewController <LROAuth2ClientDelegate> {
+  LROAuth2Client *oauthClient;
+  UIWebView *webView;
 }
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-
+- (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken;
 @end
+

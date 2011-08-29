@@ -1,140 +1,90 @@
 //
-//  InstagramAuthenticate.m
-//  UberUploader
+//  OAuthRequestController.m
+//  LROAuth2Demo
 //
-//  Created by Aditya Matharu on 23/08/2011.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Luke Redpath on 01/06/2010.
+//  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
 #import "InstagramAuthenticate.h"
+#import "LROAuth2Client.h"
+
+/*
+ * you will need to create this from OAuthCredentials-Example.h
+ *
+ */
+
+NSString *const OAuthReceivedAccessTokenNotification  = @"OAuthReceivedAccessTokenNotification";
+NSString *const OAuthRefreshedAccessTokenNotification = @"OAuthRefreshedAccessTokenNotification";
 
 @implementation InstagramAuthenticate
 
 @synthesize webView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
 /*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
+- (id)init;
 {
-}
-*/
+  if (self = [super initWithNibName:@"OAuthRequestController" bundle:nil]) {
+    oauthClient = [[LROAuth2Client alloc] initWithClientID:kInstagramClientID 
+      secret:kInstagramClientSecret redirectURL:[NSURL URLWithString:kInstagramClientAuthURL]];
 
+    oauthClient.debug = YES;
+    oauthClient.delegate = self;    
+    oauthClient.userURL  = [NSURL URLWithString:@"https://graph.facebook.com/oauth/authorize"];
+    oauthClient.tokenURL = [NSURL URLWithString:@"https://graph.facebook.com/oauth/access_token"];
+    
+    self.modalPresentationStyle = UIModalPresentationFormSheet;
+    self.modalTransitionStyle   = UIModalTransitionStyleCrossDissolve;
+  }
+  return self;
+}*/
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
-    [super viewDidLoad];
+    oauthClient = [[LROAuth2Client alloc] initWithClientID:kInstagramClientID 
+                                                    secret:kInstagramClientSecret redirectURL:[NSURL URLWithString:kInstagramClientRedirectURL]];
     
-    //Assign CliendID from Instagram
-    NSString *clientID = @"fcc9c5bf6f464b5fb1e5d084b64b54e4";
+    oauthClient.debug = YES;
+    oauthClient.delegate = self;    
+    oauthClient.userURL  = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize"]];
+    oauthClient.tokenURL = [NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"];
     
-    //CHANGE  - Currently Redrect URI for user denied is set to Google CHANGE
-    NSString *redirectURI = @"http://www.google.com";
-    //NSString *redirectURI = @"UberUploader://";
-
-    
-    //URL  to send theuser to 
-    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=code", clientID, redirectURI];
-    
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [webView loadRequest:request];
-    
-    //Calls the delegate method
-    webView.delegate = self;
-
-    
+    self.modalPresentationStyle = UIModalPresentationPageSheet;
+   // self.modalTransitionStyle   = UIModalTransitionStyleCrossDissolve;
 }
 
-//WebViewDelegate
-- (void)webViewDidFinishLoad:(UIWebView *)webViewDelegate {
-	
-	/**
-	 * Since there's some server side redirecting involved, this method/function will be called several times
-	 * we're only interested when we see a url like:  http://www.facebook.com/connect/login_success.html#access_token=..........
-	 */
-	//get the url string
-	NSString *url_string = [((webViewDelegate.request).URL) absoluteString];
-	
-	//looking for "code="
-	NSRange access_token_range = [url_string rangeOfString:@"code="];
-	
-	//coolio, we have a token, now let's parse it out....
-	if (access_token_range.length > 0) {
-		
-		//we want everything after the 'code=' thus the position where it starts + it's length
-		int from_index = access_token_range.location + access_token_range.length;
-		NSString *codeString = [url_string substringFromIndex:from_index];
-		
-		NSLog(@"code:  %@", codeString);
-        
-        
-        //Authenticate using ASIHTTPRequest
-        NSURL *authenticationURL = [NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"];
-        ASIFormDataRequest *asiformrequest = [ASIFormDataRequest requestWithURL:authenticationURL];
-        [asiformrequest setPostValue:@"fcc9c5bf6f464b5fb1e5d084b64b54e4" forKey:@"client_id"];
-        [asiformrequest setPostValue:@"cf311b8c62634aeb8ec23f7274162acf" forKey:@"client_secret"];
-        [asiformrequest setPostValue:@"authorization_code" forKey:@"grant_type"];
-        [asiformrequest setPostValue:@"http://www.google.com" forKey:@"redirect_uri"];
-        [asiformrequest setPostValue:codeString forKey:@"code"];
-        [asiformrequest startSynchronous];
-        
-        NSString *recievedData = [[NSString alloc] initWithData:[asiformrequest responseData] encoding:NSUTF8StringEncoding];
-        
-       // NSLog([asiformrequest responseString]);
-        NSLog(recievedData);
-        
-        //This parses the response from Instagram and gives a value out for access token
-        SBJsonParser *parser = [[SBJsonParser alloc] init];
-        NSDictionary *object = [parser objectWithString:recievedData];
-        NSLog([object valueForKey:@"access_token"]);
-                        
-
-	}
+- (void)viewDidUnload 
+{
+ [super viewDidUnload];
+  self.webView = nil;
 }
 
-- (void)requestStarted:(ASIHTTPRequest *)request{NSLog(@"Request Started");}
-- (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders{NSLog(@"Recieved Response Headers");}
-- (void)request:(ASIHTTPRequest *)request willRedirectToURL:(NSURL *)newURL{NSLog(@"Will Redirect");}
-- (void)requestFinished:(ASIHTTPRequest *)request{NSLog(@"Request finished");}
-- (void)requestFailed:(ASIHTTPRequest *)request{NSLog(@"Request failed");}
-- (void)requestRedirected:(ASIHTTPRequest *)request{NSLog(@"Request redirected");}
-
-
-
-
-- (void)viewDidUnload
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  NSDictionary *params = [NSDictionary dictionaryWithObject:@"touch" forKey:@"display"];
+  [oauthClient authorizeUsingWebView:self.webView additionalParameters:params];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+
+
+- (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken
 {
-    // Return YES for supported orientations
-	return YES;
+  [oauthClient refreshAccessToken:accessToken];
+}
+
+#pragma mark -
+#pragma mark LROAuth2ClientDelegate methods
+
+- (void)oauthClientDidReceiveAccessToken:(LROAuth2Client *)client
+{
+  [[NSNotificationCenter defaultCenter] postNotificationName:OAuthReceivedAccessTokenNotification object:client.accessToken];
+    [self dismissModalViewControllerAnimated:YES];
+
+}
+
+- (void)oauthClientDidRefreshAccessToken:(LROAuth2Client *)client
+{
+  [[NSNotificationCenter defaultCenter] postNotificationName:OAuthRefreshedAccessTokenNotification object:client.accessToken];
 }
 
 @end

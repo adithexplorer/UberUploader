@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4025D48D13F59364009C7788 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4025D48C13F59364009C7788 /* AssetsLibrary.framework */; };
+		404455FD140BE27A00F6A33B /* LROAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 404455F9140BE27A00F6A33B /* LROAuth2AccessToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		404455FE140BE27A00F6A33B /* LROAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 404455FB140BE27A00F6A33B /* LROAuth2Client.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40445600140BE29000F6A33B /* YAJLIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404455FF140BE29000F6A33B /* YAJLIOS.framework */; };
+		40445607140BE2A100F6A33B /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445602140BE2A100F6A33B /* NSDictionary+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40445608140BE2A100F6A33B /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445604140BE2A100F6A33B /* NSString+QueryString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40445609140BE2A100F6A33B /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40445606140BE2A100F6A33B /* NSURL+QueryInspector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4044560C140BE57100F6A33B /* InstagramAuthenticate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4044560B140BE57100F6A33B /* InstagramAuthenticate.m */; };
 		404B4D291402B0C900FCE9DB /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 404B4D281402B0C900FCE9DB /* Settings.m */; };
 		404B4D6D1402D36D00FCE9DB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404B4D6C1402D36D00FCE9DB /* CFNetwork.framework */; };
-		406272CD14043326009F63AA /* InstagramAuthenticate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406272CC14043326009F63AA /* InstagramAuthenticate.m */; };
+		406272CD14043326009F63AA /* InstagramAuthenticateDELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 406272CC14043326009F63AA /* InstagramAuthenticateDELETE.m */; };
 		406272D2140446B4009F63AA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 406272D1140446B4009F63AA /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		406272E714044729009F63AA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 406272D414044729009F63AA /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		406272E814044729009F63AA /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 406272D714044729009F63AA /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -80,11 +87,25 @@
 
 /* Begin PBXFileReference section */
 		4025D48C13F59364009C7788 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		404455F8140BE27A00F6A33B /* LROAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2AccessToken.h; sourceTree = "<group>"; };
+		404455F9140BE27A00F6A33B /* LROAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth2AccessToken.m; sourceTree = "<group>"; };
+		404455FA140BE27A00F6A33B /* LROAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2Client.h; sourceTree = "<group>"; };
+		404455FB140BE27A00F6A33B /* LROAuth2Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth2Client.m; sourceTree = "<group>"; };
+		404455FC140BE27A00F6A33B /* LROAuth2ClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		404455FF140BE29000F6A33B /* YAJLIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJLIOS.framework; path = UberUploader/YAJLIOS.framework; sourceTree = "<group>"; };
+		40445601140BE2A100F6A33B /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		40445602140BE2A100F6A33B /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		40445603140BE2A100F6A33B /* NSString+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryString.h"; sourceTree = "<group>"; };
+		40445604140BE2A100F6A33B /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
+		40445605140BE2A100F6A33B /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
+		40445606140BE2A100F6A33B /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
+		4044560A140BE57100F6A33B /* InstagramAuthenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthenticate.h; sourceTree = "<group>"; };
+		4044560B140BE57100F6A33B /* InstagramAuthenticate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthenticate.m; sourceTree = "<group>"; };
 		404B4D271402B0C900FCE9DB /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		404B4D281402B0C900FCE9DB /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		404B4D6C1402D36D00FCE9DB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		406272CB14043326009F63AA /* InstagramAuthenticate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthenticate.h; sourceTree = "<group>"; };
-		406272CC14043326009F63AA /* InstagramAuthenticate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthenticate.m; sourceTree = "<group>"; };
+		406272CB14043326009F63AA /* InstagramAuthenticateDELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthenticateDELETE.h; sourceTree = "<group>"; };
+		406272CC14043326009F63AA /* InstagramAuthenticateDELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthenticateDELETE.m; sourceTree = "<group>"; };
 		406272D0140446B4009F63AA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		406272D1140446B4009F63AA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		406272D314044729009F63AA /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -190,6 +211,7 @@
 				406272F814044806009F63AA /* libz.1.2.5.dylib in Frameworks */,
 				406272F914044806009F63AA /* libz.1.dylib in Frameworks */,
 				406272FA14044806009F63AA /* libz.dylib in Frameworks */,
+				40445600140BE29000F6A33B /* YAJLIOS.framework in Frameworks */,
 				406272F214044767009F63AA /* MobileCoreServices.framework in Frameworks */,
 				406272F01404474F009F63AA /* SystemConfiguration.framework in Frameworks */,
 				404B4D6D1402D36D00FCE9DB /* CFNetwork.framework in Frameworks */,
@@ -217,6 +239,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404455F5140BE26500F6A33B /* OAuth2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				404455F7140BE27A00F6A33B /* Classes */,
+			);
+			name = OAuth2.0;
+			sourceTree = "<group>";
+		};
+		404455F7140BE27A00F6A33B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				40445601140BE2A100F6A33B /* NSDictionary+QueryString.h */,
+				40445602140BE2A100F6A33B /* NSDictionary+QueryString.m */,
+				40445603140BE2A100F6A33B /* NSString+QueryString.h */,
+				40445604140BE2A100F6A33B /* NSString+QueryString.m */,
+				40445605140BE2A100F6A33B /* NSURL+QueryInspector.h */,
+				40445606140BE2A100F6A33B /* NSURL+QueryInspector.m */,
+				404455F8140BE27A00F6A33B /* LROAuth2AccessToken.h */,
+				404455F9140BE27A00F6A33B /* LROAuth2AccessToken.m */,
+				404455FA140BE27A00F6A33B /* LROAuth2Client.h */,
+				404455FB140BE27A00F6A33B /* LROAuth2Client.m */,
+				404455FC140BE27A00F6A33B /* LROAuth2ClientDelegate.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		404B4D311402B4F300FCE9DB /* Facebook SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +378,7 @@
 		40AC66BF13EF02B400A1DDC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				404455FF140BE29000F6A33B /* YAJLIOS.framework */,
 				408918651408F274002CDF93 /* Security.framework */,
 				406272F314044806009F63AA /* libz.1.1.3.dylib */,
 				406272F414044806009F63AA /* libz.1.2.5.dylib */,
@@ -366,9 +415,11 @@
 				409EC81E13F6ED3C0049D0B4 /* ImageEditor.m */,
 				404B4D271402B0C900FCE9DB /* Settings.h */,
 				404B4D281402B0C900FCE9DB /* Settings.m */,
+				4044560A140BE57100F6A33B /* InstagramAuthenticate.h */,
+				4044560B140BE57100F6A33B /* InstagramAuthenticate.m */,
 				40A9CD43140AD43000759337 /* Constants.h */,
-				406272CB14043326009F63AA /* InstagramAuthenticate.h */,
-				406272CC14043326009F63AA /* InstagramAuthenticate.m */,
+				406272CB14043326009F63AA /* InstagramAuthenticateDELETE.h */,
+				406272CC14043326009F63AA /* InstagramAuthenticateDELETE.m */,
 				40AC66D813EF02B400A1DDC8 /* UberUploader.xcdatamodeld */,
 				40AC66C713EF02B400A1DDC8 /* Supporting Files */,
 			);
@@ -378,6 +429,7 @@
 		40AC66C713EF02B400A1DDC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				404455F5140BE26500F6A33B /* OAuth2.0 */,
 				404B4D6F1402D5EC00FCE9DB /* GoogleOAuth */,
 				404B4D311402B4F300FCE9DB /* Facebook SDK */,
 				40AC66C813EF02B400A1DDC8 /* UberUploader-Info.plist */,
@@ -539,7 +591,7 @@
 				407591491402FCE6005BBFE7 /* SBJsonBase.m in Sources */,
 				4075914A1402FCE6005BBFE7 /* SBJsonParser.m in Sources */,
 				4075914B1402FCE6005BBFE7 /* SBJsonWriter.m in Sources */,
-				406272CD14043326009F63AA /* InstagramAuthenticate.m in Sources */,
+				406272CD14043326009F63AA /* InstagramAuthenticateDELETE.m in Sources */,
 				406272D2140446B4009F63AA /* Reachability.m in Sources */,
 				406272E714044729009F63AA /* ASIAuthenticationDialog.m in Sources */,
 				406272E814044729009F63AA /* ASIDataCompressor.m in Sources */,
@@ -553,6 +605,12 @@
 				4089185C1408EDF6002CDF93 /* GTMOAuthSignIn.m in Sources */,
 				4089185F1408EE21002CDF93 /* GTMHTTPFetcher.m in Sources */,
 				408918631408EF20002CDF93 /* GTMOAuthViewControllerTouch.m in Sources */,
+				404455FD140BE27A00F6A33B /* LROAuth2AccessToken.m in Sources */,
+				404455FE140BE27A00F6A33B /* LROAuth2Client.m in Sources */,
+				40445607140BE2A100F6A33B /* NSDictionary+QueryString.m in Sources */,
+				40445608140BE2A100F6A33B /* NSString+QueryString.m in Sources */,
+				40445609140BE2A100F6A33B /* NSURL+QueryInspector.m in Sources */,
+				4044560C140BE57100F6A33B /* InstagramAuthenticate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,9 +727,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UberUploader\"/**",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/ssoauthkitClone/SSOAuthKit/**";
+				HEADER_SEARCH_PATHS = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
 				OTHER_LDFLAGS = (
@@ -679,7 +741,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR) \"$(SRCROOT)/ssoauthkitClone/SSOAuthKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../LROAuth2Client/Vendor/YAJLIOS.framework\"/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -689,9 +751,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UberUploader\"/**",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UberUploader/UberUploader-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Volumes/AdiSeagate/iOSProjects/UberUploader/UberUploader/ssoauthkitClone/SSOAuthKit/**";
+				HEADER_SEARCH_PATHS = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "UberUploader/UberUploader-Info.plist";
 				OTHER_LDFLAGS = (
@@ -699,7 +765,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR) \"$(SRCROOT)/ssoauthkitClone/SSOAuthKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../LROAuth2Client/Vendor/YAJLIOS.framework\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
