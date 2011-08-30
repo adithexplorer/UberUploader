@@ -9,6 +9,8 @@
 #import "InstagramAuthenticate.h"
 #import "LROAuth2Client.h"
 
+
+
 /*
  * you will need to create this from OAuthCredentials-Example.h
  *
@@ -17,9 +19,15 @@
 NSString *const OAuthReceivedAccessTokenNotification  = @"OAuthReceivedAccessTokenNotification";
 NSString *const OAuthRefreshedAccessTokenNotification = @"OAuthRefreshedAccessTokenNotification";
 
+NSString * AccessTokenSavePath() {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    return [[paths objectAtIndex:0] stringByAppendingPathComponent:@"OAuthAccessToken.cache"];
+}
+
 @implementation InstagramAuthenticate
 
 @synthesize webView;
+@synthesize accessTokenInstagram;
 
 /*
 - (id)init;
@@ -39,8 +47,14 @@ NSString *const OAuthRefreshedAccessTokenNotification = @"OAuthRefreshedAccessTo
   return self;
 }*/
 
+//Accesstoken save path
+
+
+
 -(void)viewDidLoad
 {
+    
+    // check if we have a valid access token before continuing otherwise obtain a token
     oauthClient = [[LROAuth2Client alloc] initWithClientID:kInstagramClientID 
                                                     secret:kInstagramClientSecret redirectURL:[NSURL URLWithString:kInstagramClientRedirectURL]];
     
@@ -51,6 +65,12 @@ NSString *const OAuthRefreshedAccessTokenNotification = @"OAuthRefreshedAccessTo
     
     self.modalPresentationStyle = UIModalPresentationPageSheet;
    // self.modalTransitionStyle   = UIModalTransitionStyleCrossDissolve;
+   
+}
+
+- (void)saveAccessTokenToDisk
+{
+    [NSKeyedArchiver archiveRootObject:self.accessTokenInstagram toFile:AccessTokenSavePath()];
 }
 
 - (void)viewDidUnload 
@@ -77,14 +97,18 @@ NSString *const OAuthRefreshedAccessTokenNotification = @"OAuthRefreshedAccessTo
 
 - (void)oauthClientDidReceiveAccessToken:(LROAuth2Client *)client
 {
-  [[NSNotificationCenter defaultCenter] postNotificationName:OAuthReceivedAccessTokenNotification object:client.accessToken];
+ // [[NSNotificationCenter defaultCenter] postNotificationName:OAuthReceivedAccessTokenNotification object:client.accessToken];
     [self dismissModalViewControllerAnimated:YES];
-
+    accessTokenInstagram =  client.accessToken;
+    [self saveAccessTokenToDisk];
+    
 }
 
 - (void)oauthClientDidRefreshAccessToken:(LROAuth2Client *)client
 {
-  [[NSNotificationCenter defaultCenter] postNotificationName:OAuthRefreshedAccessTokenNotification object:client.accessToken];
+ // [[NSNotificationCenter defaultCenter] postNotificationName:OAuthRefreshedAccessTokenNotification object:client.accessToken];
+    [self saveAccessTokenToDisk];
+    NSLog(@"Access Token Refreshed");
 }
 
 @end

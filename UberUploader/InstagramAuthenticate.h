@@ -19,9 +19,14 @@ extern NSString *const OAuthRefreshedAccessTokenNotification;
 @interface InstagramAuthenticate : UIViewController <LROAuth2ClientDelegate> {
   LROAuth2Client *oauthClient;
   UIWebView *webView;
+    LROAuth2AccessToken *accessTokenInstagram;
 }
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) LROAuth2AccessToken *accessTokenInstagram;
 
 - (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken;
+- (void)saveAccessTokenToDisk;
+
+
 @end
 

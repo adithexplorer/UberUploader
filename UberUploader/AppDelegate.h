@@ -10,10 +10,12 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 
+@class  LROAuth2AccessToken;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, FBSessionDelegate>
 {
     Facebook *facebookInstance;
-
+    LROAuth2AccessToken *accessTokenInstagram;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -24,6 +26,7 @@
 
 //Facebook Session
 @property (strong, nonatomic) Facebook *facebookInstance;
+@property (strong, nonatomic) LROAuth2AccessToken *accessTokenInstagram;
 
 
 - (void)saveContext;

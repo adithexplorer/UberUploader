@@ -10,6 +10,8 @@
 #import "FlickrAuthenticate.h"
 
 
+
+
 @implementation Settings
 //Facebook
 @synthesize appdelegate;
@@ -18,7 +20,6 @@
 //Flickr
 @synthesize flickr;
 
-@synthesize Oauth2accessToken;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,6 +80,15 @@
     //this will update the UI if Flicker is Logged in
     [self updateUI];
 
+    
+    if(appdelegate.accessTokenInstagram == nil)
+    {
+        instagram.titleLabel.textColor = [UIColor blackColor];
+    }
+    else
+    {
+        instagram.titleLabel.text = @"Registered";
+    }
     
 }
 
@@ -256,6 +266,7 @@
 {
 //Redirects user to instagram authorization    
    // [self performSegueWithIdentifier:@"InstagramLogin" sender:self];   
+
 
 }
 

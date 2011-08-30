@@ -12,13 +12,13 @@
 #import "GTMOAuthViewControllerTouch.h"
 #import "Constants.h"
 #import "ASIHTTPRequestDelegate.h"
-#import "LROAuth2AccessToken.h"
 #import "InstagramAuthenticate.h"
 #import "ASIHTTPRequest.h"
 #import "NSString+QueryString.h"
 #import "NSObject+YAJL.h"
 
-@class  LROAuth2AccessToken;
+@class LROAuth2AccessToken;
+
 
 
 @interface Settings : UIViewController <FBDialogDelegate, FBSessionDelegate, ASIHTTPRequestDelegate>
@@ -33,7 +33,6 @@
     //Created this so that authentication can be set to this once token is recieved
     GTMOAuthAuthentication *mAuth;
 
-    LROAuth2AccessToken *Oauth2accessToken;
 
 }
 
@@ -41,7 +40,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *flickr;
 @property (strong, nonatomic) IBOutlet UIButton *instagram;
 @property (strong, nonatomic) AppDelegate *appdelegate;
-@property (nonatomic, retain) LROAuth2AccessToken *Oauth2accessToken;
 
 
 

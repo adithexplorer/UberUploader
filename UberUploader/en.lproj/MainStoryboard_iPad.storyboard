@@ -150,7 +150,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="InstagramLogin:" destination="9sL-Gp-AL9" eventType="touchUpInside" id="amJ-19-TNU"/>
                                     <segue destination="GbD-x3-qzc" kind="modal" identifier="InstagramLogin" modalPresentationStyle="formSheet" id="Gbu-A5-4tF"/>
                                 </connections>
                             </button>
@@ -162,6 +161,7 @@
                     <connections>
                         <outlet property="facebook" destination="gFV-0Q-Nix" id="k4j-Wl-mIO"/>
                         <outlet property="flickr" destination="dui-dp-alv" id="rej-bi-C3O"/>
+                        <outlet property="instagram" destination="tqD-K3-fJy" id="gaL-Vc-9Wf"/>
                     </connections>
                 </viewController>
             </objects>
@@ -414,6 +414,50 @@
             <point key="canvasLocation" x="3250" y="-1514"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ShareNow:"/>
+                <relationship kind="action" name="ShareView:"/>
+                <relationship kind="action" name="ShareViewCancel:"/>
+                <relationship kind="outlet" name="BackgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="ViewforImageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="masterView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="selectedImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="share" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ImageEditor" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageEditor.h"/>
+            <relationships>
+                <relationship kind="outlet" name="editedImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="filterPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="InstagramAuthenticate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InstagramAuthenticate.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="Settings" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Settings.h"/>
+            <relationships>
+                <relationship kind="action" name="FacebookLogin:"/>
+                <relationship kind="action" name="FlickrLogin:"/>
+                <relationship kind="action" name="InstagramLogin:"/>
+                <relationship kind="action" name="MySpaceLogin:"/>
+                <relationship kind="outlet" name="facebook" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flickr" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instagram" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -8,13 +8,18 @@
 
 #import "AppDelegate.h"
 
+NSString * AccessTokenSavePathSettings() {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    return [[paths objectAtIndex:0] stringByAppendingPathComponent:@"OAuthAccessToken.cache"];
+}
+
 @implementation AppDelegate
 @synthesize facebookInstance;
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-
+@synthesize accessTokenInstagram;
 
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -34,6 +39,12 @@
         [facebookInstance authorize:nil];
     }
     */
+    
+    
+    //Tries and load instagram authentication
+    
+    self.accessTokenInstagram = [NSKeyedUnarchiver unarchiveObjectWithFile:AccessTokenSavePathSettings()];    
+    
     return YES;
 }
 
